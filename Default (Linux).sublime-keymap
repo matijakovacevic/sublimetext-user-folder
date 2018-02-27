@@ -1,0 +1,53 @@
+[
+    { "keys": ["super+f3"], "command": "find_all_under" },
+    { "keys": ["f1"], "command": "goto_documentation" },
+    { "keys": ["f2"], "command": "use_it" },
+    { "keys": ["¸","1"], "command": "cmd" },
+    { "keys": ["ctrl+="], "command": "-" },
+    { "keys": ["ctrl+-"], "command": "-" },
+    { "keys": ["ctrl+alt+a"], "command": "alignment" },
+    { "keys": ["ctrl++"], "command": "-" },
+    { "keys": ["ctrl+'"], "command": "toggle_comment", "args": { "block": false } },
+    { "keys": ["ctrl+shift+'"], "command": "toggle_comment", "args": { "block": true } },
+    { "keys": ["ctrl+shift+space"], "command": "expand_selection", "args": {"to": "scope"} },
+    { "keys": ["ctrl+u"], "command": "soft_undo" },
+
+
+    { "keys": ["["], "command": "insert_snippet", "args": {"contents": "[$0]"}, "context":
+        [
+            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+            { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|;|\\}|$)", "match_all": true }
+        ]
+    },
+    { "keys": ["["], "command": "insert_snippet", "args": {"contents": "[${0:$SELECTION}]"}, "context":
+        [
+            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+        ]
+    },
+    { "keys": ["ctrl+alt+f"], "command": "insert_snippet", "args": {"contents": "[$0]"}, "context":
+        [
+            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+            { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|]|;|\\}|$)", "match_all": true }
+        ]
+    },
+    { "keys": ["ctrl+alt+f"], "command": "insert_snippet", "args": {"contents": "[${0:$SELECTION}]"}, "context":
+        [
+            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+        ]
+    },
+    // change column select defaults - on Linux it was Shift+Alt+Up/Down
+    { "keys": ["ctrl+alt+up"], "command": "select_lines", "args": {"forward": false} },
+    { "keys": ["ctrl+alt+down"], "command": "select_lines", "args": {"forward": true} },
+
+    // PHP Companion
+    { "keys": ["f6"], "command": "expand_fqcn" },
+    { "keys": ["shift+f6"], "command": "expand_fqcn", "args": {"leading_separator": true} },
+    { "keys": ["f10"], "command": "find_use" },
+    { "keys": ["f8"], "command": "import_namespace" },
+    { "keys": ["shift+f12"], "command": "goto_definition_scope" },
+    { "keys": ["f7"], "command": "insert_php_constructor_property" }
+]

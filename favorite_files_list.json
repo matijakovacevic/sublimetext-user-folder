@@ -1,0 +1,25 @@
+{
+    "files": [
+        {
+            "alias": "C:\\Windows\\System32\\drivers\\etc\\hosts",
+            "file": "C:\\Windows\\System32\\drivers\\etc\\hosts"
+        },
+        {
+            "alias": "C:\\Users\\Owner\\.homestead\\Homestead.yaml",
+            "file": "C:\\Users\\Owner\\.homestead\\Homestead.yaml"
+        },
+        {
+            "alias": "hosts",
+            "file": "/etc/hosts"
+        },
+        {
+            "alias": ".bash_aliases",
+            "file": "/home/matija/.bash_aliases"
+        },
+        {
+            "alias": "Homestead.yaml",
+            "file": "/home/matija/.homestead/Homestead.yaml"
+        }
+    ],
+    "version": 2
+}
